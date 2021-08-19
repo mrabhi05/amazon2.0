@@ -1,4 +1,4 @@
-var firebaseConfig = {
+  var firebaseConfig = {
     apiKey: "AIzaSyAI2M1Qj0f-2UlmGvd4saclw6a8IIzlAjg",
     authDomain: "clone2-ff671.firebaseapp.com",
     projectId: "clone2-ff671",
@@ -7,6 +7,9 @@ var firebaseConfig = {
     appId: "1:809105486991:web:7ff19d4645a66f1e956cfa",
     measurementId: "G-KT8BJMLZSS"
   };
-  // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
   firebase.analytics();
+
+  admin.initializeApp(functions.config().firebase);
+
+  var db = firebase.firestore();
